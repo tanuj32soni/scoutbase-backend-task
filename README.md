@@ -28,7 +28,9 @@ You have received this directory within the .zip archive.
 ## Directory Structure
 - `app` - Segregates the application related codebase
   - `app/models` - Contains Database Models
+    - `app/models/crewmembers.js` - CrewMember DB Model
     - `app/models/index.js` - Configures Database
+    - `app/models/movies.js` - Movies DB Model
 - `lib` - Contains wrapper over other standard libraries
   - `app.js` - Provide functionality to initialize the app
   - `express.js` - Wrapper above express module

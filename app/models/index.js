@@ -1,5 +1,8 @@
 const Sequelize = require('sequelize')
 
+const CrewMemberSchema = require('./crewmembers')
+const MovieSchema = require('./movies')
+
 const dbsettings = {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
@@ -21,6 +24,14 @@ const sequelize = new Sequelize(
   dbsettings
 )
 
+const CrewMember = CrewMemberSchema(sequelize)
+const Movie = MovieSchema(sequelize)
+
+Movie.belongsToMany(CrewMember, { through: 'movie_crew_members', foreignKey: 'movie_id', as: 'crewMembers' })
+CrewMember.belongsToMany(Movie, { through: 'movie_crew_members', foreignKey: 'crewmember_id', as: 'movies' })
+
 module.exports = {
-  sequelize
+  sequelize,
+  Movie,
+  CrewMember
 }
