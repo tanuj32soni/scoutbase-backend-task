@@ -1,4 +1,6 @@
-# Code Challenge for Scoutbase
+# Task
+
+## Code Challenge for Scoutbase
 
 If you’re reading this, then you’ve applied for a position at Scoutbase.
 
@@ -9,7 +11,7 @@ This directory includes two subdirectories:
 
 You can do one or you can do two.
 
-## Instructions
+### Instructions
 
 You have received this directory within the .zip archive.
 
@@ -20,3 +22,5 @@ You have received this directory within the .zip archive.
   1. `Yaass` username – Yassin Askar, co-founder of Scoutbase
   2. `kuka` username – Kuanysh, consultant
 5. Expect a response within 10 working days after sharing the task, you’ll be contacted with the info you’ve provided during initial registration.
+
+# Solution
