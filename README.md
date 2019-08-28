@@ -25,6 +25,15 @@ You have received this directory within the .zip archive.
 
 # Solution
 
+## Setup
+`npm install`
+
+## Seed
+`npm run seed`
+
+### Run Server
+`npm start`
+
 ## Directory Structure
 - `app` - Segregates the application related codebase
   - `app/models` - Contains Database Models
