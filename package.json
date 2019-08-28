@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/tanuj32soni/scoutbase-backend-task.git"
   },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "eslint": "^6.2.2",
     "eslint-config-standard": "^14.1.0",
