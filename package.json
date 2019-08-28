@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Scoutbase Backend Task",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/tanuj32soni/scoutbase-backend-task.git"
+  "scripts": {
+    "start": "node index.js",
+    "seed": "node seeds"
   },
   "dependencies": {
     "dotenv": "^8.1.0",
@@ -25,6 +25,10 @@
   },
   "author": "Tanuj Soni <tanuj32soni@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tanuj32soni/scoutbase-backend-task.git"
+  },
   "bugs": {
     "url": "https://github.com/tanuj32soni/scoutbase-backend-task/issues"
   },
