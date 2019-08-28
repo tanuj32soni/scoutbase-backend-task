@@ -27,5 +27,18 @@ You have received this directory within the .zip archive.
 
 ## Directory Structure
 - `app` - Segregates the application related codebase
+  - `app/models` - Contains Database Models
+    - `app/models/index.js` - Configures Database
 - `lib` - Contains wrapper over other standard libraries
+  - `app.js` - Provide functionality to initialize the app
+  - `express.js` - Wrapper above express module
+  - `index.js` - Exports other wrappers
+  - `logger.js` - Wrapper above winston module
+  - `sequelize.js` - Wrapper above sequelize module
+  - `shutdown.js` - Provides functionality to gracefully shutdown the server
+- `.env` - Configs for the application. Note: DB_PASSWORD is kept in config only for demonstration purposes.
+- `.eslintrc` - Defines rules for Linting
 - `.gitignore` - File not to be pushed to git
+- `index.js` - Starting point of the application
+- `package-lock.json` - Manages Dependency Tree to maintain similar identical trees.
+- `package.json` - Describes some metadata related to project, like version, dependencies, author, etc.
