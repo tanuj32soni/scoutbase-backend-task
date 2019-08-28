@@ -2,10 +2,12 @@ require('dotenv').config()
 
 const app = require('./lib')
 
+const SUCCESS_MESSAGE = 'Server started!'
+
 app.start()
-  .then(message => {
-    app.logger.info(message)
+  .then(() => {
+    app.logger.info(SUCCESS_MESSAGE)
   })
   .catch(error => {
-    app.logger.info(error)
+    app.logger.error(error.message)
   })
