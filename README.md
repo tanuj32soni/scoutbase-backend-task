@@ -24,3 +24,8 @@ You have received this directory within the .zip archive.
 5. Expect a response within 10 working days after sharing the task, you’ll be contacted with the info you’ve provided during initial registration.
 
 # Solution
+
+## Directory Structure
+- `app` - Segregates the application related codebase
+- `lib` - Contains wrapper over other standard libraries
+- `.gitignore` - File not to be pushed to git
