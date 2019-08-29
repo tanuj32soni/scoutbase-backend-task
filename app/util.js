@@ -4,9 +4,9 @@ function createHash (string, salt) {
   return crypto.pbkdf2Sync(
     string,
     salt,
-    process.env.HASH_ITERATION,
-    process.env.HASH_LENGTH,
-    process.env.HASH_ALGO
+    parseInt(process.env.HASH_ITERATION),
+    parseInt(process.env.HASH_LENGTH),
+    parseInt(process.env.HASH_ALGO)
   ).toString('hex')
 }
 
