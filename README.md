@@ -25,6 +25,49 @@ You have received this directory within the .zip archive.
 
 # Solution
 
+## Assumptions
+
+### Question 3: Schema must be able to return proper response for the following public query
+The expected schema seems incorrect as director object is inside actors, while it should be inside Movie
+```
+Expected
+{
+  movies {
+    title
+    year
+    rating
+    actors {
+      name
+      birthday
+      country
+      directors {
+        name
+        birthday
+        country
+      }
+    }
+  }
+}
+Assumed
+{
+  movies {
+    title
+    year
+    rating
+    actors {
+      name
+      birthday
+      country
+    }
+    directors {
+      name
+      birthday
+      country
+    }
+  }
+}
+```
+
 ## Setup
 `npm install`
 
