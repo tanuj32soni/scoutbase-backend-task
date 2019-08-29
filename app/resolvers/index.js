@@ -1,11 +1,12 @@
 const MovieResolver = require('./movie')
-const { CreateUserResolver } = require('./user')
+const { CreateUserResolver, LoginResolver } = require('./user')
 
 module.exports = {
   Query: {
     movies: MovieResolver
   },
   Mutation: {
-    createUser: CreateUserResolver
+    createUser: CreateUserResolver,
+    login: LoginResolver
   }
 }

@@ -12,13 +12,6 @@ type TokenDetails {
   token: String!
   user: User!
 }
-
-type Mutation {
-  createUser(
-    username: String!
-    password: String!
-  ): TokenDetails!
-}
 `
 
 module.exports = UserType

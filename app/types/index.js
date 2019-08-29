@@ -9,6 +9,11 @@ const QueryType = gql`
 type Query {
   movies: [Movie]
 }
+
+type Mutation {
+  createUser(username: String!, password: String!): TokenDetails!
+  login(username: String!, password: String!): TokenDetails!
+}
 `
 
 module.exports = [MovieType, UserType, QueryType]
