@@ -10,7 +10,7 @@ type Crew {
 }
 
 type Movie {
-  scoutbase_rating: Float!
+  scoutbase_rating: Float
   title: String!,
   year: String!,
   rating: Float!,
