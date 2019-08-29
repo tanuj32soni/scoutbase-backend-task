@@ -10,7 +10,7 @@ function createHash (string, salt) {
   ).toString('hex')
 }
 
-function generateToken(size) {
+function generateToken (size) {
   return crypto.randomBytes(size).toString('hex')
 }
 

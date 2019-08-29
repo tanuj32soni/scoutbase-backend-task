@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
 const createHash = require('../util').createHash
 
-function hashWhereClause(user) {
-  if (user.where){
+function hashWhereClause (user) {
+  if (user.where) {
     if (user.where.password) {
       user.where.password = createHash(user.where.password, process.env.PASSWORD_SALT)
     }

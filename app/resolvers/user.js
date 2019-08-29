@@ -1,16 +1,17 @@
 const { of } = require('await-of')
-const { UserInputError, AuthenticationError } = require('apollo-server-express');
+const { UserInputError, AuthenticationError } = require('apollo-server-express')
 
 const User = require('../models').User
 const { generateToken } = require('../util')
 
 const CreateUserResolver = async (parent, { username, password }) => {
   const token = generateToken(50)
-  const [user, error] = await of(User.create({ username, password, token }));
+  const [user, error] = await of(User.create({ username, password, token }))
 
-  if(error && error.name === 'SequelizeUniqueConstraintError') {
-    if(error.errors && error.errors[0] && error.errors[0].message == 'username must be unique')
+  if (error && error.name === 'SequelizeUniqueConstraintError') {
+    if (error.errors && error.errors[0] && error.errors[0].message === 'username must be unique') {
       throw new UserInputError('Username already exists!')
+    }
     throw new UserInputError('Incorrect Information Entered')
   }
 
@@ -26,10 +27,10 @@ const CreateUserResolver = async (parent, { username, password }) => {
 const LoginResolver = async (parent, { username, password }) => {
   const token = generateToken(50)
   const [[updated, update], error] = await of(
-    User.update({ token }, { where: {username, password}, returning: true })
-  );
+    User.update({ token }, { where: { username, password }, returning: true })
+  )
 
-  if(updated == 0 || error) {
+  if (updated === 0 || error) {
     throw new AuthenticationError('User Not Found!')
   }
 
