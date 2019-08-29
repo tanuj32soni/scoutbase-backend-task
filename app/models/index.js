@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize')
 
-const CrewMemberSchema = require('./crewmembers')
+const UserSchema = require('./users')
 const MovieSchema = require('./movies')
+const CrewMemberSchema = require('./crewmembers')
 
 const dbsettings = {
   host: process.env.DB_HOST,
@@ -26,6 +27,7 @@ const sequelize = new Sequelize(
 
 const CrewMember = CrewMemberSchema(sequelize)
 const Movie = MovieSchema(sequelize)
+const User = UserSchema(sequelize)
 
 Movie.belongsToMany(CrewMember, { through: 'movie_crew_members', foreignKey: 'movie_id', as: 'crewMembers' })
 CrewMember.belongsToMany(Movie, { through: 'movie_crew_members', foreignKey: 'crewmember_id', as: 'movies' })
@@ -33,5 +35,6 @@ CrewMember.belongsToMany(Movie, { through: 'movie_crew_members', foreignKey: 'cr
 module.exports = {
   sequelize,
   Movie,
-  CrewMember
+  CrewMember,
+  User
 }
