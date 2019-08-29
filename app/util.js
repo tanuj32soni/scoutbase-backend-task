@@ -10,4 +10,8 @@ function createHash (string, salt) {
   ).toString('hex')
 }
 
-module.exports = { createHash }
+function generateToken(size) {
+  return crypto.randomBytes(size).toString('hex')
+}
+
+module.exports = { createHash, generateToken }

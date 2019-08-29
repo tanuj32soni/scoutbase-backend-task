@@ -3,6 +3,7 @@
 const { gql } = require('apollo-server-express')
 
 const MovieType = require('./movie')
+const UserType = require('./user')
 
 const QueryType = gql`
 type Query {
@@ -10,4 +11,4 @@ type Query {
 }
 `
 
-module.exports = [MovieType, QueryType]
+module.exports = [MovieType, UserType, QueryType]
